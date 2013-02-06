@@ -96,6 +96,11 @@ Partial Class Level5
         Me.Timer11 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer12 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer13 = New System.Windows.Forms.Timer(Me.components)
+        Me.Label56 = New System.Windows.Forms.Label()
+        Me.Timer14 = New System.Windows.Forms.Timer(Me.components)
+        Me.Timer15 = New System.Windows.Forms.Timer(Me.components)
+        Me.ToHome = New System.Windows.Forms.Label()
+        Me.Timer16 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.Finish, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Start, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RunningMan, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -235,7 +240,7 @@ Partial Class Level5
         '
         Me.Label13.BackColor = System.Drawing.SystemColors.InfoText
         Me.Label13.ForeColor = System.Drawing.Color.Black
-        Me.Label13.Location = New System.Drawing.Point(558, 448)
+        Me.Label13.Location = New System.Drawing.Point(558, 460)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(273, 17)
         Me.Label13.TabIndex = 220
@@ -387,7 +392,7 @@ Partial Class Level5
         Me.Label28.ForeColor = System.Drawing.Color.Black
         Me.Label28.Location = New System.Drawing.Point(307, 415)
         Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(14, 107)
+        Me.Label28.Size = New System.Drawing.Size(14, 99)
         Me.Label28.TabIndex = 235
         Me.Label28.Text = "Label4"
         '
@@ -475,7 +480,7 @@ Partial Class Level5
         '
         Me.Label37.BackColor = System.Drawing.SystemColors.InfoText
         Me.Label37.ForeColor = System.Drawing.Color.Black
-        Me.Label37.Location = New System.Drawing.Point(444, 313)
+        Me.Label37.Location = New System.Drawing.Point(400, 313)
         Me.Label37.Name = "Label37"
         Me.Label37.Size = New System.Drawing.Size(14, 18)
         Me.Label37.TabIndex = 244
@@ -485,7 +490,7 @@ Partial Class Level5
         '
         Me.Label38.BackColor = System.Drawing.SystemColors.InfoText
         Me.Label38.ForeColor = System.Drawing.Color.Black
-        Me.Label38.Location = New System.Drawing.Point(413, 313)
+        Me.Label38.Location = New System.Drawing.Point(435, 313)
         Me.Label38.Name = "Label38"
         Me.Label38.Size = New System.Drawing.Size(14, 18)
         Me.Label38.TabIndex = 245
@@ -495,7 +500,7 @@ Partial Class Level5
         '
         Me.Label39.BackColor = System.Drawing.SystemColors.InfoText
         Me.Label39.ForeColor = System.Drawing.Color.Black
-        Me.Label39.Location = New System.Drawing.Point(374, 313)
+        Me.Label39.Location = New System.Drawing.Point(367, 313)
         Me.Label39.Name = "Label39"
         Me.Label39.Size = New System.Drawing.Size(14, 18)
         Me.Label39.TabIndex = 246
@@ -515,7 +520,7 @@ Partial Class Level5
         '
         Me.Label41.BackColor = System.Drawing.SystemColors.InfoText
         Me.Label41.ForeColor = System.Drawing.Color.Black
-        Me.Label41.Location = New System.Drawing.Point(307, 313)
+        Me.Label41.Location = New System.Drawing.Point(303, 313)
         Me.Label41.Name = "Label41"
         Me.Label41.Size = New System.Drawing.Size(14, 18)
         Me.Label41.TabIndex = 248
@@ -525,7 +530,7 @@ Partial Class Level5
         '
         Me.Label42.BackColor = System.Drawing.SystemColors.InfoText
         Me.Label42.ForeColor = System.Drawing.Color.Black
-        Me.Label42.Location = New System.Drawing.Point(444, 184)
+        Me.Label42.Location = New System.Drawing.Point(435, 184)
         Me.Label42.Name = "Label42"
         Me.Label42.Size = New System.Drawing.Size(14, 18)
         Me.Label42.TabIndex = 249
@@ -535,7 +540,7 @@ Partial Class Level5
         '
         Me.Label43.BackColor = System.Drawing.SystemColors.InfoText
         Me.Label43.ForeColor = System.Drawing.Color.Black
-        Me.Label43.Location = New System.Drawing.Point(307, 184)
+        Me.Label43.Location = New System.Drawing.Point(303, 184)
         Me.Label43.Name = "Label43"
         Me.Label43.Size = New System.Drawing.Size(14, 18)
         Me.Label43.TabIndex = 250
@@ -545,7 +550,7 @@ Partial Class Level5
         '
         Me.Label44.BackColor = System.Drawing.SystemColors.InfoText
         Me.Label44.ForeColor = System.Drawing.Color.Black
-        Me.Label44.Location = New System.Drawing.Point(374, 184)
+        Me.Label44.Location = New System.Drawing.Point(367, 184)
         Me.Label44.Name = "Label44"
         Me.Label44.Size = New System.Drawing.Size(14, 18)
         Me.Label44.TabIndex = 251
@@ -565,7 +570,7 @@ Partial Class Level5
         '
         Me.Label46.BackColor = System.Drawing.SystemColors.InfoText
         Me.Label46.ForeColor = System.Drawing.Color.Black
-        Me.Label46.Location = New System.Drawing.Point(413, 184)
+        Me.Label46.Location = New System.Drawing.Point(400, 184)
         Me.Label46.Name = "Label46"
         Me.Label46.Size = New System.Drawing.Size(14, 18)
         Me.Label46.TabIndex = 253
@@ -753,11 +758,51 @@ Partial Class Level5
         Me.Timer13.Enabled = True
         Me.Timer13.Interval = 5
         '
+        'Label56
+        '
+        Me.Label56.BackColor = System.Drawing.SystemColors.InfoText
+        Me.Label56.ForeColor = System.Drawing.Color.Black
+        Me.Label56.Location = New System.Drawing.Point(588, 562)
+        Me.Label56.Name = "Label56"
+        Me.Label56.Size = New System.Drawing.Size(77, 18)
+        Me.Label56.TabIndex = 266
+        Me.Label56.Text = "Label4"
+        '
+        'Timer14
+        '
+        Me.Timer14.Enabled = True
+        Me.Timer14.Interval = 10
+        '
+        'Timer15
+        '
+        Me.Timer15.Interval = 10
+        '
+        'ToHome
+        '
+        Me.ToHome.BackColor = System.Drawing.Color.Olive
+        Me.ToHome.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ToHome.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.ToHome.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.ToHome.Location = New System.Drawing.Point(914, 261)
+        Me.ToHome.Name = "ToHome"
+        Me.ToHome.Size = New System.Drawing.Size(56, 42)
+        Me.ToHome.TabIndex = 275
+        Me.ToHome.Text = "Menu"
+        Me.ToHome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Timer16
+        '
+        Me.Timer16.Enabled = True
+        Me.Timer16.Interval = 1000
+        '
         'Level5
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(920, 685)
+        Me.ClientSize = New System.Drawing.Size(974, 685)
+        Me.ControlBox = False
+        Me.Controls.Add(Me.ToHome)
+        Me.Controls.Add(Me.Label56)
         Me.Controls.Add(Me.RunningMan)
         Me.Controls.Add(Me.Start)
         Me.Controls.Add(Me.Finish)
@@ -817,6 +862,7 @@ Partial Class Level5
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Wall1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Level5"
         Me.Text = "Level5"
         CType(Me.Finish, System.ComponentModel.ISupportInitialize).EndInit()
@@ -897,4 +943,9 @@ Partial Class Level5
     Friend WithEvents Timer11 As System.Windows.Forms.Timer
     Friend WithEvents Timer12 As System.Windows.Forms.Timer
     Friend WithEvents Timer13 As System.Windows.Forms.Timer
+    Friend WithEvents Label56 As System.Windows.Forms.Label
+    Friend WithEvents Timer14 As System.Windows.Forms.Timer
+    Friend WithEvents Timer15 As System.Windows.Forms.Timer
+    Friend WithEvents ToHome As System.Windows.Forms.Label
+    Friend WithEvents Timer16 As System.Windows.Forms.Timer
 End Class

@@ -1,68 +1,40 @@
 ﻿Public Class Level2
-    Public level2Seconds, level2Minutes, level2Deaths As Integer
+    Public time, level2Deaths As Integer
+    Public finishedLevel2 As Boolean
+
     Private Sub Level2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MsgBox("Level 2! Your doing great!")
         Timer1.Enabled = True
         Me.BackColor = Color.Tan
-        Start.Visible = True
-        Finish.Visible = True
     End Sub
-
     Private Sub Level2_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyDown
-
         Dim startX, startY As Integer
+        Dim finished As Boolean = False
         startX = 469
         startY = 394
-        If e.KeyCode = Keys.Up Then
-            Movement.playerUp(RunningMan)
-        End If
-        If e.KeyCode = Keys.Left Then
-            Movement.playerLeft(RunningMan)
-        End If
-        If e.KeyCode = Keys.Down Then
-            Movement.playerDown(RunningMan)
-        End If
-        If e.KeyCode = Keys.Right Then
-            Movement.playerRight(RunningMan)
-        End If
 
-        For Each item As Control In Me.Controls
-            If TypeOf item Is Label Then
-                If RunningMan.Bounds.IntersectsWith(item.Bounds) Then
-                    RunningMan.Left = startX
-                    RunningMan.Top = startY
-                    level2Deaths += 1
-                End If
-            End If
-        Next
-        If Me.Start.Bounds.IntersectsWith(Me.RunningMan.Bounds) Then
-            Finish.Visible = True
-            Start.Visible = True
-        Else : Start.Visible = False
-            Finish.Visible = True
-        End If
-        Timer1.Enabled = False
-        level2Minutes = level2Seconds / 60
-        If level2Minutes > 0 Then
-            level2Seconds -= level2Minutes * 60
-        End If
-        If Me.Finish.Bounds.IntersectsWith(Me.RunningMan.Bounds) Then
-            MsgBox(Movement.message(level2Minutes, level2Seconds, level2Deaths))
+        Functions.PlayerMovement(RunningMan, e)
+        Functions.CheckCollision(RunningMan, Me.Controls, startX, startY)
+        Functions.MakeStartVisible(RunningMan, Start, Finish)
+        finished = Functions.CheckFinish(RunningMan, Finish, Timer1, level2Deaths, finishedLevel2)
+     
+        If (finished = True) Then
+            Functions.Message(time)
             Level3.Show()
-            Me.Hide()
-
+            Me.Close()
+            Timer1.Enabled = False
         End If
     End Sub
 
-    Private Sub Level2_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-        MsgBox("Come again!")
-    End Sub
-
-    Private Sub Finish_Click_1(sender As Object, e As EventArgs) Handles Finish.Click
+    Private Sub Finish_Click(sender As Object, e As EventArgs) Handles Finish.Click
+        Functions.Message(time)
         Level3.Show()
-        Me.Hide()
+        Me.Close()
     End Sub
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        level2Seconds += 1
+        time += 1
+    End Sub
+    Private Sub ToHome_Click(sender As Object, e As EventArgs) Handles ToHome.Click
+        Functions.ReturnToStart(Me)
     End Sub
 End Class

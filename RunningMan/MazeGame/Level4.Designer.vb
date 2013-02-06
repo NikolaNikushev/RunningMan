@@ -86,6 +86,7 @@ Partial Class Level4
         Me.RunningMan = New System.Windows.Forms.PictureBox()
         Me.Wall1 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.ToHome = New System.Windows.Forms.Label()
         CType(Me.Start, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Finish, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RunningMan, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -381,9 +382,9 @@ Partial Class Level4
         'Wall9
         '
         Me.Wall9.BackColor = System.Drawing.SystemColors.InfoText
-        Me.Wall9.Location = New System.Drawing.Point(1078, 64)
+        Me.Wall9.Location = New System.Drawing.Point(1078, 49)
         Me.Wall9.Name = "Wall9"
-        Me.Wall9.Size = New System.Drawing.Size(127, 19)
+        Me.Wall9.Size = New System.Drawing.Size(127, 34)
         Me.Wall9.TabIndex = 167
         Me.Wall9.Text = "Label38"
         '
@@ -620,11 +621,26 @@ Partial Class Level4
         Me.Timer1.Enabled = True
         Me.Timer1.Interval = 1000
         '
+        'ToHome
+        '
+        Me.ToHome.BackColor = System.Drawing.Color.Olive
+        Me.ToHome.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ToHome.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.ToHome.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.ToHome.Location = New System.Drawing.Point(1091, 0)
+        Me.ToHome.Name = "ToHome"
+        Me.ToHome.Size = New System.Drawing.Size(114, 64)
+        Me.ToHome.TabIndex = 275
+        Me.ToHome.Text = "Menu"
+        Me.ToHome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'Level4
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1224, 822)
+        Me.ControlBox = False
+        Me.Controls.Add(Me.ToHome)
         Me.Controls.Add(Me.Wall1)
         Me.Controls.Add(Me.RunningMan)
         Me.Controls.Add(Me.Start)
@@ -682,6 +698,7 @@ Partial Class Level4
         Me.Controls.Add(Me.Wall7)
         Me.Controls.Add(Me.Wall14)
         Me.Controls.Add(Me.Wall21)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Level4"
         Me.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Text = "Level4"
@@ -753,5 +770,6 @@ Partial Class Level4
     Friend WithEvents RunningMan As System.Windows.Forms.PictureBox
     Friend WithEvents Wall1 As System.Windows.Forms.Label
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
+    Friend WithEvents ToHome As System.Windows.Forms.Label
 
 End Class

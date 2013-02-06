@@ -54,6 +54,7 @@ Partial Class Level3
         Me.Wall2 = New System.Windows.Forms.Label()
         Me.Wall5 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.ToHome = New System.Windows.Forms.Label()
         CType(Me.Start, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Finish, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RunningMan, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -332,11 +333,26 @@ Partial Class Level3
         Me.Timer1.Enabled = True
         Me.Timer1.Interval = 1000
         '
+        'ToHome
+        '
+        Me.ToHome.BackColor = System.Drawing.Color.Olive
+        Me.ToHome.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ToHome.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.ToHome.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.ToHome.Location = New System.Drawing.Point(969, 228)
+        Me.ToHome.Name = "ToHome"
+        Me.ToHome.Size = New System.Drawing.Size(56, 42)
+        Me.ToHome.TabIndex = 274
+        Me.ToHome.Text = "Menu"
+        Me.ToHome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'Level3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(961, 572)
+        Me.ClientSize = New System.Drawing.Size(1027, 572)
+        Me.ControlBox = False
+        Me.Controls.Add(Me.ToHome)
         Me.Controls.Add(Me.Wall5)
         Me.Controls.Add(Me.Wall2)
         Me.Controls.Add(Me.Wall4)
@@ -366,6 +382,7 @@ Partial Class Level3
         Me.Controls.Add(Me.Wall6)
         Me.Controls.Add(Me.Wall3)
         Me.Controls.Add(Me.Wall1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Level3"
         Me.Text = "Level3"
         CType(Me.Start, System.ComponentModel.ISupportInitialize).EndInit()
@@ -404,4 +421,5 @@ Partial Class Level3
     Friend WithEvents Wall2 As System.Windows.Forms.Label
     Friend WithEvents Wall5 As System.Windows.Forms.Label
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
+    Friend WithEvents ToHome As System.Windows.Forms.Label
 End Class

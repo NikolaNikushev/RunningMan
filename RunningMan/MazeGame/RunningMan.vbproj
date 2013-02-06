@@ -102,10 +102,22 @@
     <Compile Include="Level5.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Movement.Designer.vb">
-      <DependentUpon>Movement.vb</DependentUpon>
+    <Compile Include="Functions.Designer.vb">
+      <DependentUpon>Functions.vb</DependentUpon>
     </Compile>
-    <Compile Include="Movement.vb">
+    <Compile Include="Functions.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Levels.Designer.vb">
+      <DependentUpon>Levels.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Levels.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartMenu.Designer.vb">
+      <DependentUpon>StartMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StartMenu.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -140,6 +152,12 @@
     <EmbeddedResource Include="Level5.resx">
       <DependentUpon>Level5.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Levels.resx">
+      <DependentUpon>Levels.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartMenu.resx">
+      <DependentUpon>StartMenu.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -158,6 +176,12 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RunningMan.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RunningMan.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
