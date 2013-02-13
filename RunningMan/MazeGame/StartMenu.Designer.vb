@@ -77,7 +77,7 @@ Partial Class StartMenu
         Me.Time.AutoSize = True
         Me.Time.BackColor = System.Drawing.Color.Olive
         Me.Time.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Time.Cursor = System.Windows.Forms.Cursors.No
+        Me.Time.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.Time.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.Time.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.Time.Location = New System.Drawing.Point(2, 43)
@@ -91,7 +91,7 @@ Partial Class StartMenu
         '
         Me.TimeResult.BackColor = System.Drawing.Color.Olive
         Me.TimeResult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TimeResult.Cursor = System.Windows.Forms.Cursors.No
+        Me.TimeResult.Cursor = System.Windows.Forms.Cursors.Default
         Me.TimeResult.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.TimeResult.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.TimeResult.Location = New System.Drawing.Point(123, 4)

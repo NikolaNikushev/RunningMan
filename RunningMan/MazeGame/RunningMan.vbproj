@@ -71,6 +71,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
     <Compile Include="Level2.Designer.vb">
       <DependentUpon>Level2.vb</DependentUpon>
     </Compile>

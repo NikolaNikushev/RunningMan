@@ -27,6 +27,7 @@
 
     Private Sub Level1_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyDown
         Dim finished As Boolean = False
+
         Functions.PlayerMovement(RunningMan, e)
         Functions.CheckCollision(RunningMan, Me.Controls, startX, startY)
         Functions.MakeStartVisible(RunningMan, Start, Finish)

@@ -99,6 +99,10 @@
             times = globalAnswerSec / 60
             globalAnswerSec -= (times * 60)
         End While
+        If globalAnswerSec < 0 Then
+            globalAnswerSec *= (-1)
+
+        End If
         StartMenu.TimeResult.Text = globalAnswerMin & " minutes  " & " and " & globalAnswerSec & " seconds" & " and died " & playerDeaths & " times"
         StartMenu.TimeResult.Visible = True
         StartMenu.Time.Visible = True
